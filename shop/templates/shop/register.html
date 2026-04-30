@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create an Account</title>
+    <style>
+        body { font-family: sans-serif; background: #f4f4f4; display: flex; justify-content: center; padding-top: 50px; }
+        .form-container { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); width: 350px; }
+        h2 { text-align: center; color: #333; }
+        button { background: #007bff; color: white; border: none; padding: 10px; width: 100%; border-radius: 5px; cursor: pointer; margin-top: 10px; }
+        button:hover { background: #0056b3; }
+        .back-link { display: block; text-align: center; margin-top: 15px; text-decoration: none; color: #777; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Register</h2>
+        <form method="POST">
+            {% csrf_token %} <!-- Security token required by Django -->
+            <!-- Inside register.html, replace the <form> section with this: -->
+            <!-- This part shows error messages if your password is too short or simple -->
+            {% if form.errors %}
+               <div style="color: red; font-size: 0.8rem; margin-bottom: 15px;">
+                   Please correct the errors below and try again.
+               </div>
+            {% endif %}
+
+            {{ form.as_p }}<!-- This automatically creates the input fields -->
+            <button type="submit">Sign Up</button>
+        </form>
+            
+        <a href="/" class="back-link">Return to Store</a>
+    </div>
+</body>
+</html>

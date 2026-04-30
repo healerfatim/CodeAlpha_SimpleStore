@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ product.name }} - Details</title>
+    <style>
+        body { font-family: sans-serif; padding: 40px; text-align: center; background: #f4f4f4; }
+        .container { background: white; padding: 20px; border-radius: 10px; max-width: 500px; margin: auto; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        img { width: 100%; border-radius: 10px; }
+        h1 { color: #333; }
+        .price { font-size: 1.5rem; color: green; font-weight: bold; }
+        .back-btn { display: inline-block; margin-top: 20px; text-decoration: none; color: #007bff; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="{{ product.image_url|default:'https://via.placeholder.com/300' }}" alt="{{ product.name }}">
+        <h1>{{ product.name }}</h1>
+        <p>{{ product.description }}</p>
+        <p class="price">${{ product.price }}</p>
+        <p>In Stock: {{ product.stock }}</p>
+        <a href="/" class="back-btn">← Back to Store</a>
+    </div>
+</body>
+</html>
