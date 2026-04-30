@@ -1,3 +1,15 @@
+It looks like there's an issue with the GitHub API connection on my end for pushing files today. 
+
+However, since we've already finalized all the text, you can very easily update this yourself right in your browser!
+
+1. Go to your `README.md` file: [https://github.com/healerfatim/CodeAlpha_SimpleStore/blob/master/README.md](https://github.com/healerfatim/CodeAlpha_SimpleStore/blob/master/README.md)
+2. Click the **pencil icon** (✏️) in the top right corner of the file to edit it.
+3. Paste the complete text block below, replacing everything in the file.
+4. Click the green **Commit changes...** button.
+
+Here is the finalized content to paste:
+
+```markdown
 # CodeAlpha_SimpleStore
 
 ![CodeAlpha Task 1](https://img.shields.io/badge/CodeAlpha-Task_1-blue.svg)
@@ -69,9 +81,19 @@ Initialize the SQLite database with the required schema:
 python manage.py migrate
 ```
 
-### 5. Run the Development Server
+### 5. Create a Superuser (Admin Access)
+To access the Django admin panel, you (or your teacher) will need to create a superuser account. 
+Run the following command and follow the prompts to set a username, email, and password:
+```bash
+python manage.py createsuperuser
+```
+
+### 6. Run the Development Server
 Start the local server:
 ```bash
 python manage.py runserver
 ```
-Once the server is running, open your web browser and navigate to `http://127.0.0.1:8000/` to view the application.
+Once the server is running:
+* **Main Site**: Navigate to `http://127.0.0.1:8000/`
+* **Admin Panel**: Navigate to `http://127.0.0.1:8000/admin/` and log in with the superuser credentials you just created.
+```
