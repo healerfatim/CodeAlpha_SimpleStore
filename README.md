@@ -1,13 +1,4 @@
-It looks like there's an issue with the GitHub API connection on my end for pushing files today. 
 
-However, since we've already finalized all the text, you can very easily update this yourself right in your browser!
-
-1. Go to your `README.md` file: [https://github.com/healerfatim/CodeAlpha_SimpleStore/blob/master/README.md](https://github.com/healerfatim/CodeAlpha_SimpleStore/blob/master/README.md)
-2. Click the **pencil icon** (✏️) in the top right corner of the file to edit it.
-3. Paste the complete text block below, replacing everything in the file.
-4. Click the green **Commit changes...** button.
-
-Here is the finalized content to paste:
 
 ```markdown
 # CodeAlpha_SimpleStore
